@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import MainSummary from './MainSummary/MainSummary';
 import MainForm from './MainForm/MainForm';
+import FeatureData from './FeatureData';
 
 // This object will allow us to
 // easily convert numbers into US dollar values
@@ -50,12 +51,12 @@ class App extends Component {
         <main> 
           <MainForm 
             currencyConst ={USCurrencyFormat} 
-            features={this.props.features}
+            features={FeatureData}
             selectedOptions={this.state}
             handleUpdate={this.updateFeature}/>
           <MainSummary 
             currencyConst={USCurrencyFormat} 
-            features={this.props.features}
+            features={FeatureData}
             selectedOptions={this.state}/>
         </main>
       </div>
